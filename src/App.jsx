@@ -51,7 +51,18 @@ function App() {
           >
             Send a test error <span>↗</span>
           </button>
-          <p className="test-error-note">Sends a test error to DevNexus.</p>
+          <button
+            className="button button-test"
+            type="button"
+            onClick={() => {
+              window.setTimeout(() => {
+                throw new TypeError('DevNexus second test error triggered from the website');
+              }, 0);
+            }}
+          >
+            Send another error <span>↗</span>
+          </button>
+          <p className="test-error-note">Each button sends a different test error to DevNexus.</p>
           <div className="hero-note"><span className="note-line" /> No perfect plan required</div>
         </div>
         <div className="hero-art" aria-label="Abstract illustration of a growing flower" role="img">
@@ -116,4 +127,3 @@ function App() {
 }
 
 export default App;
-
