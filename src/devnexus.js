@@ -1,4 +1,4 @@
-import { DevNexus } from '@devnexus/sdk';
+import { DevNexus } from 'devnexus-sdk';
 
 // Vite exposes VITE_* values in the browser bundle. Use a browser/public-scoped
 // DevNexus key here; never put a server secret key in a client-side app.
