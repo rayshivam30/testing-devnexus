@@ -40,6 +40,18 @@ function App() {
           <h1>Make room for<br /><em>good ideas.</em></h1>
           <p className="hero-text">A calmer way to bring the things you care about to life. Start wherever you are, and see what grows.</p>
           <a className="button" href="#ideas">Explore the idea <span>↓</span></a>
+          <button
+            className="button button-test"
+            type="button"
+            onClick={() => {
+              window.setTimeout(() => {
+                throw new Error('DevNexus test error triggered from the website');
+              }, 0);
+            }}
+          >
+            Send a test error <span>↗</span>
+          </button>
+          <p className="test-error-note">Sends a test error to DevNexus.</p>
           <div className="hero-note"><span className="note-line" /> No perfect plan required</div>
         </div>
         <div className="hero-art" aria-label="Abstract illustration of a growing flower" role="img">
@@ -104,3 +116,4 @@ function App() {
 }
 
 export default App;
+
